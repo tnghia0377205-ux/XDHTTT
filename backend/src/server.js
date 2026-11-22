@@ -26,6 +26,33 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Middleware tự động lọc data và loại bỏ ký tự thừa (Auto-Sanitize & Trim)
+function sanitizeData(data) {
+  if (typeof data === 'string') {
+    return data
+      .replace(/[\u200B-\u200D\uFEFF]/g, '') // loại bỏ ký tự điều khiển ẩn, zero-width
+      .replace(/\s+/g, ' ')                  // chuẩn hóa khoảng trắng thừa
+      .trim();                               // xóa khoảng trắng đầu và cuối
+  }
+  if (Array.isArray(data)) {
+    return data.map(sanitizeData);
+  }
+  if (data !== null && typeof data === 'object') {
+    const cleaned = {};
+    for (const key in data) {
+      cleaned[key] = sanitizeData(data[key]);
+    }
+    return cleaned;
+  }
+  return data;
+}
+
+app.use((req, res, next) => {
+  if (req.body) req.body = sanitizeData(req.body);
+  if (req.query) req.query = sanitizeData(req.query);
+  next();
+});
+
 // Serve uploaded files statically
 const uploadDir = path.join(__dirname, '..', 'uploads');
 if (!fs.existsSync(uploadDir)) {
