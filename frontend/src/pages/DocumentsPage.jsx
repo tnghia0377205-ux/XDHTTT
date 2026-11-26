@@ -19,6 +19,36 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
+const getStatusLabel = (status) => {
+  switch (status) {
+    case 'CHO_TIEP_NHAN':
+      return 'Chờ tiếp nhận';
+    case 'DANG_XU_LY':
+      return 'Đang xử lý';
+    case 'DA_HOAN_THANH':
+      return 'Đã hoàn thành';
+    case 'LUU_TRU':
+      return 'Lưu trữ';
+    default:
+      return 'Chờ tiếp nhận';
+  }
+};
+
+const getProgressLabel = (progress) => {
+  switch (progress) {
+    case 'CHUA_XU_LY':
+      return 'Chưa xử lý';
+    case 'DANG_XU_LY':
+      return 'Đang xử lý';
+    case 'DA_HOAN_THANH':
+      return 'Đã hoàn thành';
+    case 'TRA_LAI':
+      return 'Trả lại';
+    default:
+      return 'Chưa xử lý';
+  }
+};
+
 export default function DocumentsPage({ docType = 'INCOMING' }) {
   const { user, apiFetch } = useAuth();
   const [documents, setDocuments] = useState([]);
@@ -381,11 +411,7 @@ export default function DocumentsPage({ docType = 'INCOMING' }) {
                           ? 'bg-amber-50 text-amber-700 border border-amber-200'
                           : 'bg-slate-100 text-slate-600 border border-slate-200'
                       }`}>
-                        {doc.status === 'DA_HOAN_THANH'
-                          ? 'Hoàn thành'
-                          : doc.status === 'DANG_XU_LY'
-                          ? 'Đang xử lý'
-                          : 'Chờ tiếp nhận'}
+                        {getStatusLabel(doc.status)}
                       </span>
                     </td>
 
@@ -718,7 +744,7 @@ export default function DocumentsPage({ docType = 'INCOMING' }) {
                 </div>
                 <div>
                   <p className="text-slate-400 font-medium">Trạng thái</p>
-                  <p className="font-bold text-blue-700 mt-0.5">{docDetail.status}</p>
+                  <p className="font-bold text-blue-700 mt-0.5">{getStatusLabel(docDetail.status)}</p>
                 </div>
               </div>
 
@@ -768,7 +794,7 @@ export default function DocumentsPage({ docType = 'INCOMING' }) {
                         <div className="flex items-center gap-3 text-[11px] text-slate-400 mt-1">
                           <span>Hạn xử lý: {p.deadline || 'Không có'}</span>
                           <span>•</span>
-                          <span className="font-semibold text-purple-700">{p.progress_status}</span>
+                          <span className="font-semibold text-purple-700">{getProgressLabel(p.progress_status)}</span>
                         </div>
                       </div>
                     ))}

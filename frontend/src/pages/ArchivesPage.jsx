@@ -87,7 +87,7 @@ export default function ArchivesPage() {
                     <td className="py-2.5 px-3 text-slate-500">{doc.issued_date}</td>
                     <td className="py-2.5 px-3">
                       <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700">
-                        {doc.status}
+                        {doc.status === 'LUU_TRU' ? 'Lưu trữ' : doc.status === 'DA_HOAN_THANH' ? 'Đã hoàn thành' : doc.status === 'DANG_XU_LY' ? 'Đang xử lý' : 'Chờ tiếp nhận'}
                       </span>
                     </td>
                   </tr>
