@@ -34,8 +34,8 @@ export default function Sidebar({ currentTab, setCurrentTab }) {
     <aside className="w-64 min-h-screen bg-[#0B192C] flex flex-col text-slate-300 select-none border-r border-slate-800 shrink-0">
       {/* Brand Header */}
       <div className="h-16 flex items-center px-5 border-b border-slate-800/80 gap-3">
-        <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
-          <FileText className="w-5 h-5" />
+        <div className="w-10 h-10 rounded-full bg-white p-0.5 flex items-center justify-center shadow-md shadow-blue-500/20 shrink-0">
+          <img src="/qnu-logo.png" alt="Logo QNU" className="w-full h-full object-contain rounded-full" />
         </div>
         <div>
           <h1 className="text-white font-bold text-base tracking-wide leading-tight">QNU DocFlow</h1>

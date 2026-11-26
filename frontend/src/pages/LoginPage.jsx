@@ -38,8 +38,8 @@ export default function LoginPage() {
       <div className="max-w-md w-full bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl border border-white/30 overflow-hidden relative z-10 animate-in fade-in zoom-in-95 duration-200">
         {/* Brand Banner */}
         <div className="bg-[#0B192C] px-8 py-8 text-center border-b border-slate-800 relative">
-          <div className="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center mx-auto mb-3 shadow-lg shadow-blue-500/30">
-            <FileText className="w-8 h-8" />
+          <div className="w-20 h-20 rounded-full bg-white p-1 flex items-center justify-center mx-auto mb-3 shadow-xl shadow-blue-500/30 border-2 border-blue-400/40">
+            <img src="/qnu-logo.png" alt="Logo Trường Đại học Quy Nhơn" className="w-full h-full object-contain rounded-full" />
           </div>
           <h1 className="text-xl font-bold text-white tracking-wide">QNU DocFlow</h1>
           <p className="text-xs text-blue-200 mt-1 font-medium">Hệ thống Quản lý Công văn & Điều hành Văn bản</p>
