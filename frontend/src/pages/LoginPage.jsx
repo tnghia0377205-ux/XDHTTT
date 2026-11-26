@@ -28,12 +28,14 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Background soft glow effects */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div
+      className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/qnu-campus.webp')" }}
+    >
+      {/* Dark gradient & blur overlay to ensure contrast and focus */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/75 via-slate-900/65 to-blue-950/70 backdrop-blur-[2px]"></div>
 
-      <div className="max-w-md w-full bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden relative z-10 animate-in fade-in zoom-in-95 duration-200">
+      <div className="max-w-md w-full bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl border border-white/30 overflow-hidden relative z-10 animate-in fade-in zoom-in-95 duration-200">
         {/* Brand Banner */}
         <div className="bg-[#0B192C] px-8 py-8 text-center border-b border-slate-800 relative">
           <div className="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center mx-auto mb-3 shadow-lg shadow-blue-500/30">
