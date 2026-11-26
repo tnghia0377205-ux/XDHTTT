@@ -41,7 +41,7 @@ export default function LoginPage() {
           <div className="w-20 h-20 rounded-full bg-white p-1 flex items-center justify-center mx-auto mb-3 shadow-xl shadow-blue-500/30 border-2 border-blue-400/40">
             <img src="/qnu-logo.png" alt="Logo Trường Đại học Quy Nhơn" className="w-full h-full object-contain rounded-full" />
           </div>
-          <h1 className="text-xl font-bold text-white tracking-wide">QNU DocFlow</h1>
+          <h1 className="text-xl font-bold text-white tracking-wide">Công văn số QNU</h1>
           <p className="text-xs text-blue-200 mt-1 font-medium">Hệ thống Quản lý Công văn & Điều hành Văn bản</p>
           <p className="text-[11px] text-slate-400 mt-0.5">Trường Đại học Quy Nhơn</p>
         </div>

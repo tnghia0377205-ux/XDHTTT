@@ -41,7 +41,7 @@ export default function Dashboard({ onNavigate }) {
       <div>
         <h1 className="text-2xl font-bold text-slate-800 tracking-tight">Tổng quan hệ thống</h1>
         <p className="text-sm text-slate-500 mt-0.5">
-          Xin chào, {user?.full_name || 'Quản trị hệ thống'}. Chào mừng quay trở lại QNU DocFlow!
+          Xin chào, {user?.full_name || 'Quản trị hệ thống'}. Chào mừng quay trở lại Công văn số QNU!
         </p>
       </div>
 
@@ -254,7 +254,7 @@ export default function Dashboard({ onNavigate }) {
       {/* Bottom Banner (Matches screenshot) */}
       <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white rounded-2xl p-5 shadow-sm flex items-center justify-between">
         <div>
-          <h4 className="font-bold text-sm">QNU DocFlow - Hệ thống Quản lý Công văn điện tử</h4>
+          <h4 className="font-bold text-sm">Công văn số QNU - Hệ thống Quản lý Công văn điện tử</h4>
           <p className="text-xs text-blue-200 mt-0.5">
             Phục vụ điều hành, lưu trữ và luân chuyển văn bản tại Trường Đại học Quy Nhơn.
           </p>

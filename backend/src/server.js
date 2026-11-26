@@ -72,7 +72,7 @@ app.use('/api/stats', statsRoutes);
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ONLINE',
-    system: 'QNU DocFlow - Trường Đại học Quy Nhơn',
+    system: 'Công văn số QNU - Trường Đại học Quy Nhơn',
     timestamp: new Date().toISOString(),
     database: 'SQLite 3 (Built-in Node 24 Enterprise)'
   });
@@ -86,7 +86,7 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
   console.log(`=======================================================`);
-  console.log(`🚀 QNU DocFlow Backend API đang chạy tại: http://localhost:${PORT}`);
+  console.log(`🚀 Công văn số QNU Backend API đang chạy tại: http://localhost:${PORT}`);
   console.log(`📌 Frontend kết nối tại: http://localhost:5173`);
   console.log(`=======================================================`);
 });

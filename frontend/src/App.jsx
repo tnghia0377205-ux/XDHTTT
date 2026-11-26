@@ -23,7 +23,7 @@ export default function App() {
       <div className="min-h-screen bg-slate-900 flex items-center justify-center text-white text-xs">
         <div className="flex flex-col items-center gap-3">
           <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-          <p className="font-semibold tracking-wide text-slate-300">Đang khởi động QNU DocFlow...</p>
+          <p className="font-semibold tracking-wide text-slate-300">Đang khởi động Công văn số QNU...</p>
         </div>
       </div>
     );

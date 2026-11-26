@@ -38,7 +38,7 @@ export default function Sidebar({ currentTab, setCurrentTab }) {
           <img src="/qnu-logo.png" alt="Logo QNU" className="w-full h-full object-contain rounded-full" />
         </div>
         <div>
-          <h1 className="text-white font-bold text-base tracking-wide leading-tight">QNU DocFlow</h1>
+          <h1 className="text-white font-bold text-base tracking-wide leading-tight">Công văn số QNU</h1>
           <p className="text-xs text-slate-400">Quản lý công văn</p>
         </div>
       </div>

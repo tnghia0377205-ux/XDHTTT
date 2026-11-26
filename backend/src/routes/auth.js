@@ -78,7 +78,7 @@ router.post('/login', (req, res) => {
     action: 'LOGIN_SUCCESS',
     entityType: 'AUTH',
     entityId: user.id,
-    details: `Đăng nhập thành công với vai trò [${user.role}]`,
+    details: `Đăng nhập thành công với tài khoản (${user.username})`,
     req
   });
 

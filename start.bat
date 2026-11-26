@@ -1,14 +1,14 @@
 @echo off
 chcp 65001 >nul
 echo =========================================================================
-echo    HỆ THỐNG QUẢN LÝ CÔNG VĂN - QNU DOCFLOW (TRƯỜNG ĐẠI HỌC QUY NHƠN)
+echo    HỆ THỐNG CÔNG VĂN SỐ QNU (TRƯỜNG ĐẠI HỌC QUY NHƠN)
 echo =========================================================================
 echo.
 echo [1/3] Đang khởi động Backend API (Port 5000)...
-start "QNU DocFlow - Backend API" cmd /k "cd backend && node src/server.js"
+start "Công văn số QNU - Backend API" cmd /k "cd backend && node src/server.js"
 
 echo [2/3] Đang khởi động Frontend Vite (Port 5173)...
-start "QNU DocFlow - Frontend" cmd /k "cd frontend && npm run dev"
+start "Công văn số QNU - Frontend" cmd /k "cd frontend && npm run dev"
 
 echo [3/3] Đang mở trình duyệt tại: http://localhost:5173
 timeout /t 3 >nul
